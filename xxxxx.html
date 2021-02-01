@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!-- -->
+<!--    <section>-->
+<!--        <div class="loader">-->
+<!--            <span style="&#45;&#45;i:1;"></span>-->
+<!--            <span style="&#45;&#45;i:2;"></span>-->
+<!--            <span style="&#45;&#45;i:3;"></span>-->
+<!--            <span style="&#45;&#45;i:4;"></span>-->
+<!--            <span style="&#45;&#45;i:5;"></span>-->
+<!--            <span style="&#45;&#45;i:6;"></span>-->
+<!--            <span style="&#45;&#45;i:7;"></span>-->
+<!--            <span style="&#45;&#45;i:8;"></span>-->
+<!--            <span style="&#45;&#45;i:9;"></span>-->
+<!--            <span style="&#45;&#45;i:10;"></span>-->
+<!--            <span style="&#45;&#45;i:11;"></span>-->
+<!--            <span style="&#45;&#45;i:12;"></span>-->
+<!--            <span style="&#45;&#45;i:13;"></span>-->
+<!--            <span style="&#45;&#45;i:14;"></span>-->
+<!--            <span style="&#45;&#45;i:15;"></span>-->
+<!--            <span style="&#45;&#45;i:16;"></span>-->
+<!--            <span style="&#45;&#45;i:17;"></span>-->
+<!--            <span style="&#45;&#45;i:18;"></span>-->
+<!--            <span style="&#45;&#45;i:19;"></span>-->
+<!--            <span style="&#45;&#45;i:20;"></span>-->
+<!--        </div>-->
+<!--        <br/>-->
+<!--        <span class="oe_throbber_message" style="color:white">xxxxxxxxxxxx</span>-->
+<!--    </section>-->
+
+<!--    <style>-->
+<!--        *-->
+<!--        {-->
+<!--            margin: 0;-->
+<!--            padding: 0;-->
+<!--            box-sizing: border-box;-->
+<!--        }-->
+<!--        section-->
+<!--        {-->
+<!--            display: flex;-->
+<!--            justify-content: center;-->
+<!--            align-items: center;-->
+<!--            min-height: 100vh;-->
+<!--            animation: animateBg 10s linear infinite;-->
+<!--            background: #042104;-->
+<!--        }-->
+<!--        @keyframes animateBg {-->
+<!--            0%-->
+<!--            {-->
+<!--                filter: hue-rotate(0deg);-->
+<!--            }-->
+<!--            100%-->
+<!--            {-->
+<!--                filter: hue-rotate(360deg);-->
+<!--            }-->
+<!--        }-->
+<!--        section .loader-->
+<!--        {-->
+<!--            position: relative;-->
+<!--            width: 30px;-->
+<!--            height: 30px;-->
+<!--        }-->
+<!--        section .loader span-->
+<!--        {-->
+<!--            position: absolute;-->
+<!--            top: 0;-->
+<!--            left: 0;-->
+<!--            width: 100%;-->
+<!--            height: 100%;-->
+<!--            transform: rotate(calc(18deg * var(&#45;&#45;i)));-->
+<!--        }-->
+<!--        section .loader span::before-->
+<!--        {-->
+<!--            content: '';-->
+<!--            position: absolute;-->
+<!--            top: 0;-->
+<!--            left: 0;-->
+<!--            width: 6px;-->
+<!--            height: 6px;-->
+<!--            border-radius: 60%;-->
+<!--            background: #00ff0a;-->
+<!--            animation: animate 2s linear infinite;-->
+<!--            animation-delay: calc(0.1s * var(&#45;&#45;i));-->
+<!--        }-->
+<!--        @keyframes animate {-->
+<!--            0%-->
+<!--            {-->
+<!--                transform: scale(1);-->
+<!--            }-->
+<!--            80%,100%-->
+<!--            {-->
+<!--                transform: scale(0);-->
+<!--            }-->
+<!--        }-->
+<!--    </style>-->
+
+
+
+<!--  hi-->
+
+<!--    <button class="btn btn-primary"> xxxxxxxxxxxxxx</button>-->
+<!--    <style>-->
+<!--        .btn{-->
+<!--            position: relative;-->
+<!--            transition: 0.5s;-->
+<!--            color: #20c997;-->
+<!--            z-index: 1-->
+<!--        }-->
+<!--        .btn:hover-->
+<!--        {-->
+<!--            color: #FFFFFF;-->
+<!--        }-->
+<!--        .btn:before-->
+<!--        {-->
+<!--            content: '';-->
+<!--            position: absolute;-->
+<!--            top: -5%;-->
+<!--            bottom: -5%;-->
+<!--            left: -1%;-->
+<!--            width: 55%;-->
+<!--            height: 110%;-->
+<!--            background: #20c997;-->
+<!--            z-index: -1;-->
+<!--            border-bottom-left-radius: 5%;-->
+<!--            border-top-left-radius: 5%;-->
+<!--            transform: scaleX(0);-->
+<!--            transition: transform 0.5s;-->
+<!--            transform-origin: left;-->
+<!--        }-->
+<!--        .btn:hover:before-->
+<!--        {-->
+<!--            transform: scaleX(1);-->
+<!--            transition: transform 0.5s;-->
+<!--            transform-origin: right;-->
+<!--        }-->
+<!--        .btn:after-->
+<!--        {-->
+<!--            content: '';-->
+<!--            position: absolute;-->
+<!--            top: -5%;-->
+<!--            bottom: -5%;-->
+<!--            right: -1%;-->
+<!--            width: 55%;-->
+<!--            height: 110%;-->
+<!--            background: #20c997;-->
+<!--            z-index: -1;-->
+<!--            border-bottom-right-radius: 3%;-->
+<!--            border-top-right-radius: 3%;-->
+<!--            transform: scaleX(0);-->
+<!--            transition: transform 0.5s;-->
+<!--            transform-origin: right;-->
+
+<!--        }-->
+<!--        .btn:hover:after-->
+<!--        {-->
+<!--            transform: scaleX(1);-->
+<!--            transition: transform 0.5s;-->
+<!--            transform-origin: left;-->
+<!--        }-->
+<!--    </style>-->
+
+
+    <div class="container">
+        <h2 ><span>Countdown to Lunar New Year</span><a id="year">NA</a></h2>
+        <div class="countdown">
+            <div id="day">NA</div>
+            <div id="hour">NA</div>
+            <div id="minute">NA</div>
+            <div id="second">NA</div>
+        </div>
+    </div>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        body
+        {
+            background: #333;
+        }
+        .container
+        {
+            position: absolute;
+            top: 80px;
+            left: 100px;
+            right: 100px;
+            bottom: 80px;
+            background: #fff;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .container h2
+        {
+            text-align: center;
+            font-size: 10em;
+            line-height: 0.7em;
+            color: #333;
+            margin-top: -80px;
+        }
+        .container h2 span
+        {
+            display: block;
+            font-weight: 300;
+            letter-spacing: 6px;
+            font-size: 0.2em;
+        }
+        .countdown
+        {
+            display: flex;
+            margin-top: 50px;
+        }
+        .countdown div
+        {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            background: #284e79;
+            color: #fff;
+            margin: 0 15px;
+            font-size: 3em;
+            font-weight: 500;
+        }
+        .countdown div:before
+        {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            left: 0;
+            width: 100%;
+            height: 35px;
+            background: #f0a734;
+            color: #333;
+            font-size: 0.35em;
+            line-height: 35px;
+            font-weight: 300;
+        }
+        .countdown #day:before
+        {
+            content: 'Ngày';
+        }
+        .countdown #hour:before
+        {
+            content: 'Giờ';
+        }
+        .countdown #minute:before
+        {
+            content: 'Phút';
+        }
+        .countdown #second:before
+        {
+            content: 'Giây';
+        }
+    </style>
+    <script type="text/javascript">
+        // var countDate = new Date('Jan 1, 2022 00:00:00').getTime();
+        var PI = 3.14;
+        function getNewMoonDay(k, timeZone) {
+            var T, T2, T3, dr, Jd1, M, Mpr, F, C1, deltat, JdNew;
+            T = k / 1236.85; // Time in Julian centuries from 1900 January 0.5
+            T2 = T * T;
+            T3 = T2 * T;
+            dr = PI / 180;
+            Jd1 = 2415020.75933 + 29.53058868 * k + 0.0001178 * T2 - 0.000000155 * T3;
+            Jd1 = Jd1 + 0.00033 * Math.sin((166.56 + 132.87 * T - 0.009173 * T2) * dr); // Mean new moon
+            M = 359.2242 + 29.10535608 * k - 0.0000333 * T2 - 0.00000347 * T3; // Sun's mean anomaly
+            Mpr = 306.0253 + 385.81691806 * k + 0.0107306 * T2 + 0.00001236 * T3; // Moon's mean anomaly
+            F = 21.2964 + 390.67050646 * k - 0.0016528 * T2 - 0.00000239 * T3; // Moon's argument of latitude
+            C1 = (0.1734 - 0.000393 * T) * Math.sin(M * dr) + 0.0021 * Math.sin(2 * dr * M);
+            C1 = C1 - 0.4068 * Math.sin(Mpr * dr) + 0.0161 * Math.sin(dr * 2 * Mpr);
+            C1 = C1 - 0.0004 * Math.sin(dr * 3 * Mpr);
+            C1 = C1 + 0.0104 * Math.sin(dr * 2 * F) - 0.0051 * Math.sin(dr * (M + Mpr));
+            C1 = C1 - 0.0074 * Math.sin(dr * (M - Mpr)) + 0.0004 * Math.sin(dr * (2 * F + M));
+            C1 = C1 - 0.0004 * Math.sin(dr * (2 * F - M)) - 0.0006 * Math.sin(dr * (2 * F + Mpr));
+            C1 = C1 + 0.0010 * Math.sin(dr * (2 * F - Mpr)) + 0.0005 * Math.sin(dr * (2 * Mpr + M));
+            if (T < -11) {
+                deltat = 0.001 + 0.000839 * T + 0.0002261 * T2 - 0.00000845 * T3 - 0.000000081 * T * T3;
+            } else {
+                deltat = -0.000278 + 0.000265 * T + 0.000262 * T2;
+            };
+            JdNew = Jd1 + C1 - deltat;
+            return INT(JdNew + 0.5 + timeZone / 24)
+        }
+        function jdFromDate(dd, mm, yy) {
+            var a, y, m, jd;
+            a = INT((14 - mm) / 12);
+            y = yy + 4800 - a;
+            m = mm + 12 * a - 3;
+            jd = dd + INT((153 * m + 2) / 5) + 365 * y + INT(y / 4) - INT(y / 100) + INT(y / 400) - 32045;
+            if (jd < 2299161) {
+                jd = dd + INT((153 * m + 2) / 5) + 365 * y + INT(y / 4) - 32083;
+            }
+            return jd;
+        }
+        function jdToDate(jd) {
+            var a, b, c, d, e, m, day, month, year;
+            if (jd > 2299160) { // After 5/10/1582, Gregorian calendar
+                a = jd + 32044;
+                b = INT((4 * a + 3) / 146097);
+                c = a - INT((b * 146097) / 4);
+            } else {
+                b = 0;
+                c = jd + 32082;
+            }
+            d = INT((4 * c + 3) / 1461);
+            e = c - INT((1461 * d) / 4);
+            m = INT((5 * e + 2) / 153);
+            day = e - INT((153 * m + 2) / 5) + 1;
+            month = m + 3 - 12 * INT(m / 10);
+            year = b * 100 + d - 4800 + INT(m / 10);
+            return new Array(day, month, year);
+        }
+
+        function getSunLongitude(jdn, timeZone) {
+            var T, T2, dr, M, L0, DL, L;
+            T = (jdn - 2451545.5 - timeZone / 24) / 36525; // Time in Julian centuries from 2000-01-01 12:00:00 GMT
+            T2 = T * T;
+            dr = PI / 180; // degree to radian
+            M = 357.52910 + 35999.05030 * T - 0.0001559 * T2 - 0.00000048 * T * T2; // mean anomaly, degree
+            L0 = 280.46645 + 36000.76983 * T + 0.0003032 * T2; // mean longitude, degree
+            DL = (1.914600 - 0.004817 * T - 0.000014 * T2) * Math.sin(dr * M);
+            DL = DL + (0.019993 - 0.000101 * T) * Math.sin(dr * 2 * M) + 0.000290 * Math.sin(dr * 3 * M);
+            L = L0 + DL; // true longitude, degree
+            L = L * dr;
+            L = L - PI * 2 * (INT(L / (PI * 2))); // Normalize to (0, 2*PI)
+            return INT(L / PI * 6)
+        }
+        function getLunarMonth11(yy, timeZone) {
+            var k, off, nm, sunLong;
+            off = jdFromDate(31, 12, yy) - 2415021;
+            k = INT(off / 29.530588853);
+            nm = getNewMoonDay(k, timeZone);
+            sunLong = getSunLongitude(nm, timeZone); // sun longitude at local midnight
+            if (sunLong >= 9) {
+                nm = getNewMoonDay(k - 1, timeZone);
+            }
+            return nm;
+        }
+        function getLeapMonthOffset(a11, timeZone) {
+            var k, last, arc, i;
+            k = INT((a11 - 2415021.076998695) / 29.530588853 + 0.5);
+            last = 0;
+            i = 1; // We start with the month following lunar month 11
+            arc = getSunLongitude(getNewMoonDay(k + i, timeZone), timeZone);
+            do {
+                last = arc;
+                i++;
+                arc = getSunLongitude(getNewMoonDay(k + i, timeZone), timeZone);
+            } while (arc != last && i < 14);
+            return i - 1;
+        }
+        function INT(d) {
+            return Math.floor(d);
+        }
+        function convertLunar2Solar(lunarDay, lunarMonth, lunarYear, lunarLeap, timeZone) {
+            var k, a11, b11, off, leapOff, leapMonth, monthStart;
+            if (lunarMonth < 11) {
+                a11 = getLunarMonth11(lunarYear - 1, timeZone);
+                b11 = getLunarMonth11(lunarYear, timeZone);
+            } else {
+                a11 = getLunarMonth11(lunarYear, timeZone);
+                b11 = getLunarMonth11(lunarYear + 1, timeZone);
+            }
+            off = lunarMonth - 11;
+            if (off < 0) {
+                off += 12;
+            }
+            if (b11 - a11 > 365) {
+                leapOff = getLeapMonthOffset(a11, timeZone);
+                leapMonth = leapOff - 2;
+                if (leapMonth < 0) {
+                    leapMonth += 12;
+                }
+                if (lunarLeap != 0 && lunarMonth != leapMonth) {
+                    return new Array(0, 0, 0);
+                } else if (lunarLeap != 0 || off >= leapOff) {
+                    off += 1;
+                }
+            }
+            k = INT(0.5 + (a11 - 2415021.076998695) / 29.530588853);
+            monthStart = getNewMoonDay(k + off, timeZone);
+            return jdToDate(monthStart + lunarDay - 1);
+        }
+        function getdate() {
+            var now = new Date().getTime();
+            var now_lunar_date = convertLunar2Solar(1, 1, new Date().getFullYear(), 0, 7)
+            var now_solar_date = new Date('' + now_lunar_date[1] + '/' + now_lunar_date[0] + '/' + (now_lunar_date[2]) + ' 00:00:00').getTime()
+            if (now_solar_date < now){
+                now_lunar_date = convertLunar2Solar(1, 1, new Date().getFullYear() + 1, 0, 7)
+                now_solar_date = new Date('' + now_lunar_date[1] + '/' + now_lunar_date[0] + '/' + (now_lunar_date[2]) + ' 00:00:00').getTime()
+            }
+            return now_solar_date
+        }
+        var res = setInterval(function () {
+            newYear();
+        }, 1000)
+        function newYear(){
+            if (!document.getElementById('day')){
+                clearInterval(res)
+                return
+            }
+            var countDate = getdate()
+            var now = new Date().getTime();
+            var gap = countDate - now;
+            var second = 1000;
+            var minute = second * 60;
+            var hour = minute * 60;
+            var day = hour * 24;
+
+            var d = Math.floor(gap/ (day));
+            var h = Math.floor((gap % day) / (hour));
+            var m = Math.floor((gap % hour) / (minute));
+            var s = Math.floor((gap % minute) / (second));
+            document.getElementById('day').innerText = d
+            document.getElementById('hour').innerText = h
+            document.getElementById('minute').innerText = m
+            document.getElementById('second').innerText = s
+            document.getElementById('year').innerText = new Date(countDate).getFullYear()
+        }
+        setInterval(function () {
+            newYear();
+        }, 1000)
+    </script>
+</body>
+</html>
